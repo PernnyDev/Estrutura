@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const Post = require('./models/Post');
 
 //carregaando o cabeçalho do html em outras paginas
-app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
+app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
