@@ -1,1 +1,13 @@
 <h1>Lista de Posts: </h1>
+
+{{#each posts}}
+    <h1>Id:{{id}}</h1>
+    <h2>Titulo:{{this.titulo}}</h2>
+    <p>Conteúdo:{{this.conteudo}}</p>
+    <p>Data:{{createdAt}}</p>
+    <a href="/deletar/{{id}}"><button>Deletar</button>  </a>
+    <a href="/alterar/{{id}}"><button>Alterar</button>  </a>
+    <hr>
+{{/each}}
+        
+{{! Path: views/formulario.handlebars }}
