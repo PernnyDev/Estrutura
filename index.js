@@ -10,6 +10,11 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//arquivos estaticos
+
+app.use('/public',express.static('public/css/bootstrap'));
+
+
 //rota principal
 app.get('/', function (req, res) {
     //o then passa os posts para nossa view
